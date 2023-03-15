@@ -3,7 +3,7 @@ import Overview from './Overview';
 import Header from './Header';
 import AddEntry from './AddEntry';
 
-function App() {
+const App = () => {
   return (
     <>
       <Header />

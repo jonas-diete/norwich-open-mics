@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Header() {
+const Header = () => {
   return (
     <>
       <h1>Open Mic Nights Norwich</h1>

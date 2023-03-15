@@ -1,6 +1,6 @@
 import React from 'react'
 
-function AddEntry() {
+const AddEntry = () => {
   return (
     <>
       <div>Add a new entry:</div>
