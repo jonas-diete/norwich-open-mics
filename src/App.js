@@ -1,9 +1,13 @@
 import React from 'react';
 import Overview from './Overview';
+import Header from './Header';
 
 function App() {
   return (
-    <Overview />
+    <>
+      <Header />
+      <Overview />
+    </>
   );
 }
 
