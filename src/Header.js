@@ -4,7 +4,7 @@ function Header() {
   return (
     <>
       <h1>Open Mic Nights Norwich</h1>
-      <h2>play and listen to new music in the Fine City</h2>
+      <h2>Play and Listen to New Music in the Fine City</h2>
     </>
   );
 }
