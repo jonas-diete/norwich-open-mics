@@ -28,7 +28,7 @@ const Overview = () => {
         <td>https://www.thebrickmakers.com/eventsguide </td>
       </tr>
       <tr>
-        <td>Wednesday - every 3rd Wednesday of the Month</td>
+        <td>Wednesday (3rd of every Month)</td>
         <td>The Cellar House</td>
         <td>?</td>
         <td>https://www.facebook.com/TheCellarHouse</td>
