@@ -46,10 +46,10 @@ const Overview = ({ openMics }) => {
         <td>https://www.facebook.com/TheReindeerNorwich</td>
       </tr>
       <tr>
-        <td>{openMics.day}</td>
-        <td>{openMics.place}</td>
-        <td>{openMics.time}</td>
-        <td>{openMics.link}</td>
+        <td>{openMics[0].day}</td>
+        <td>{openMics[0].place}</td>
+        <td>{openMics[0].time}</td>
+        <td>{openMics[0].link}</td>
       </tr>
     </table>
   );
