@@ -46,7 +46,7 @@ const App = () => {
   return (
     <>
       <Header />
-      <Overview openMics = {openMics}/>
+      <Overview openMics={openMics}/>
       <AddEntry />
     </>
   );
