@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Overview = () => {
+const Overview = ({ openMics }) => {
   return (
     <table>
       <tr>
@@ -44,6 +44,12 @@ const Overview = () => {
         <td>The Reindeer</td>
         <td>7pm-11pm</td>
         <td>https://www.facebook.com/TheReindeerNorwich</td>
+      </tr>
+      <tr>
+        <td>{openMics.day}</td>
+        <td>{openMics.place}</td>
+        <td>{openMics.time}</td>
+        <td>{openMics.link}</td>
       </tr>
     </table>
   );
