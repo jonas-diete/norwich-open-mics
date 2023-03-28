@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Overview from './Overview';
 import Header from './Header';
-import AddEntry from './AddEntry';
 import './App.css';
 
 const App = () => {
@@ -43,11 +42,40 @@ const App = () => {
       link: 'https://www.facebook.com/TheReindeerNorwich' 
     }, 
   ])
+
+  const openMicDayRef = useRef()
+  const openMicPlaceRef = useRef()
+  const openMicTimeRef = useRef()
+  const openMicLinkRef = useRef()
+
+  const handleAddOpenMic = (e) => {
+    const newDay = openMicDayRef.current.value;
+    const newPlace = openMicPlaceRef.current.value;
+    const newTime = openMicTimeRef.current.value;
+    const newLink = openMicLinkRef.current.value;
+    if (newDay === '' || newPlace === '' || newTime === '' || newLink === '') return
+    setOpenMics([{      
+      day: newDay, 
+      place: newPlace, 
+      time: newTime, 
+      link: newLink 
+    }]);
+    openMicDayRef.current.value = null;
+    openMicPlaceRef.current.value = null;
+    openMicTimeRef.current.value = null;
+    openMicLinkRef.current.value = null;
+  }
+
   return (
     <>
       <Header />
       <Overview openMics={openMics}/>
-      <AddEntry />
+      <div>Add a new entry:</div>
+      <input ref={openMicDayRef} type="text" placeholder="Weekday" />
+      <input ref={openMicPlaceRef} type="text" placeholder="Place" />
+      <input ref={openMicTimeRef} type="text" placeholder="Time" />
+      <input ref={openMicLinkRef} type="text" placeholder="Link" />
+      <button onClick={handleAddOpenMic}>Add to overview</button>
     </>
   );
 }
