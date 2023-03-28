@@ -43,23 +43,25 @@ const App = () => {
     }, 
   ])
 
-  const openMicDayRef = useRef()
-  const openMicPlaceRef = useRef()
-  const openMicTimeRef = useRef()
-  const openMicLinkRef = useRef()
+  const openMicDayRef = useRef();
+  const openMicPlaceRef = useRef();
+  const openMicTimeRef = useRef();
+  const openMicLinkRef = useRef();
 
-  const handleAddOpenMic = (e) => {
+  const handleAddOpenMic = () => {
     const newDay = openMicDayRef.current.value;
     const newPlace = openMicPlaceRef.current.value;
     const newTime = openMicTimeRef.current.value;
     const newLink = openMicLinkRef.current.value;
     if (newDay === '' || newPlace === '' || newTime === '' || newLink === '') return
-    setOpenMics([{      
-      day: newDay, 
-      place: newPlace, 
-      time: newTime, 
-      link: newLink 
-    }]);
+    setOpenMics(prevOpenMics => {
+      return [...prevOpenMics, {      
+        day: newDay, 
+        place: newPlace, 
+        time: newTime, 
+        link: newLink 
+      }];
+    });
     openMicDayRef.current.value = null;
     openMicPlaceRef.current.value = null;
     openMicTimeRef.current.value = null;
