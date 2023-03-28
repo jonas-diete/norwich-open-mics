@@ -13,7 +13,7 @@ const Overview = ({ openMics }) => {
         </tr>
         {
           openMics.map(openMic => {
-            return <OpenMic data={ openMic } />
+            return <OpenMic key={ openMic.place } data={ openMic } />
           })
         }
       </tbody>
